@@ -1,4 +1,4 @@
-package ejercicios.ejercicio2;
+package ejercicios.ejercicio1;
 
 import java.awt.Frame;
 import java.awt.TextField;
