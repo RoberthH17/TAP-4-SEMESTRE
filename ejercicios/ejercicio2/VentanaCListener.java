@@ -28,7 +28,7 @@ public class VentanaCListener extends Frame implements ActionListener  {
         array = new ArrayList<>();
         isClicked = true;
         btn_click = new Button("Aceptar");
-  
+        btn_mult = new Button("Multiplicar");
         btn_clear = new Button("Limpiar");
         lbl_msg = new Label("Introduzca el Texto en el campo inferior de la ventana:");
         txt_in = new TextField("");
@@ -37,11 +37,12 @@ public class VentanaCListener extends Frame implements ActionListener  {
         this.add(lbl_msg, BorderLayout.NORTH);
         this.add(txt_in, BorderLayout.SOUTH);
         this.add(btn_click, BorderLayout.EAST);
-
+        this.add(btn_mult, BorderLayout.NORTH);
         this.add(txt_result, BorderLayout.CENTER);
         this.add(btn_clear, BorderLayout.WEST);
         btn_click.addActionListener(this);
         btn_clear.addActionListener(this);
+        btn_mult.addActionListener(this);
       
     }
     public static void main(String args[]) {
@@ -60,6 +61,25 @@ public class VentanaCListener extends Frame implements ActionListener  {
         }else{
             btn_click.setLabel("Presionado!!!");
         } */
+            if(arg0.getSource() == btn_mult){
+
+                txt_result.setText("");{
+
+                   
+                    if(array.size()>0){
+                        Integer i=1;
+                        for(Integer n: array){
+                            i=i*n;
+                        }
+                        txt_result.setText("" + i.toString());
+                    }
+                }
+
+
+
+            }
+
+
         if (arg0.getSource() == btn_click) {
             String texto = txt_in.getText();
             if(texto.equals("SUMAR")) {
@@ -102,7 +122,7 @@ public class VentanaCListener extends Frame implements ActionListener  {
      */
     Button btn_click;
     Button btn_clear;
-
+    Button btn_mult;
     TextField txt_in;
     Label lbl_msg;
     TextArea txt_result;
