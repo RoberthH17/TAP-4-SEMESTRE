@@ -102,6 +102,7 @@ public class VentanaCListener extends Frame implements ActionListener  {
      */
     Button btn_click;
     Button btn_clear;
+
     TextField txt_in;
     Label lbl_msg;
     TextArea txt_result;
