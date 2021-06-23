@@ -1,0 +1,7 @@
+{
+    "java.project.sourcePaths": [
+        "practica4/logica",
+        "practica4/interfaz",
+        "practica4/comunicacion"
+    ]
+}
